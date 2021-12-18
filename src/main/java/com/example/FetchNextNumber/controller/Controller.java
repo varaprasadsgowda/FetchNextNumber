@@ -22,7 +22,7 @@ public class Controller {
     @GetMapping("/FetchNextNumber/{id}")
     public ResponseEntity<returnObject>  updateTable(@PathVariable("id") int id){
 
-        returnObject ans = service.bignessLogic(id);
+        returnObject ans = service.bussnessLogic(id);
         return new ResponseEntity<>(ans,HttpStatus.OK);
     }
 

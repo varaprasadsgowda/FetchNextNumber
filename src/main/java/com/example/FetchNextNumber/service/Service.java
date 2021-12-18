@@ -14,7 +14,7 @@ public class Service {
     @Autowired
     Repository repository;
 
-
+    // initial state of the table
     @PostConstruct
     public void run(){
         repository.save(new table(0,0));
@@ -31,23 +31,25 @@ public class Service {
     }
 
 
-    public returnObject bignessLogic(int id) {
+    public returnObject bussnessLogic(int id) {
         table currentState = repository.getById(id);
 
         int currentValue = currentState.getValue();
         int nextValue = currentValue+1;
         int category = id;
+
+        // that give next number with same category
         while(category != digSum(nextValue)){
             nextValue++;
         }
 
-        System.out.println(currentValue +" "+nextValue);
 
         table nextState = new table(category,nextValue);
         repository.save(nextState);
 
         return new returnObject(currentValue,nextValue);
     }
+    // Helper function that calculate the digit sum
     private int digSum(int n){
         if(n==0)return 0;
         return  (n % 9 ==0) ? 9 : (n % 9);
