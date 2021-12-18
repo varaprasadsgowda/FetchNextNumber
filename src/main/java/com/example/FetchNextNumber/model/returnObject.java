@@ -1,28 +1,30 @@
 package com.example.FetchNextNumber.model;
 
 public class returnObject {
-    private String oldValue;
-    private String newValue;
+    private int oldValue;
+    private int newValue;
 
 
-    public returnObject(String oldValue, String newValue) {
+    public returnObject(int oldValue, int newValue) {
         this.oldValue = oldValue;
         this.newValue = newValue;
     }
 
-    public String getOldValue() {
+
+
+    public int getOldValue() {
         return oldValue;
     }
 
-    public void setOldValue(String oldValue) {
+    public void setOldValue(int oldValue) {
         this.oldValue = oldValue;
     }
 
-    public String getNewValue() {
+    public int getNewValue() {
         return newValue;
     }
 
-    public void setNewValue(String newValue) {
+    public void setNewValue(int newValue) {
         this.newValue = newValue;
     }
 
