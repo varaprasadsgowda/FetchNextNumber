@@ -36,4 +36,12 @@ public class table {
     public void setValue(String value) {
         this.value = value;
     }
+
+    @Override
+    public String toString() {
+        return "table{" +
+                "category='" + category + '\'' +
+                ", value='" + value + '\'' +
+                '}';
+    }
 }
