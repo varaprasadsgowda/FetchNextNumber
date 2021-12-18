@@ -3,15 +3,18 @@ package com.example.FetchNextNumber.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "keyValue")
 public class table {
     @Id
-    private String category;
-    @Column(nullable = false)
-    private String value;
+    @Column
+    private int category;
+    @Column
+    private int value;
 
-    public table(String category, String value) {
+    public table(int category, int value) {
         this.category = category;
         this.value = value;
     }
@@ -21,19 +24,19 @@ public class table {
     }
 
 
-    public String getCategory() {
+    public int getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(int category) {
         this.category = category;
     }
 
-    public String getValue() {
+    public int getValue() {
         return value;
     }
 
-    public void setValue(String value) {
+    public void setValue(int value) {
         this.value = value;
     }
 
