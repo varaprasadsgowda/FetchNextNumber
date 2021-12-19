@@ -1,0 +1,18 @@
+
+1 . Application.properties
+	Connection to database ( H2 - database)
+		spring.datasource.url=jdbc:h2:mem:test
+		spring.datasource.driverClassName=org.h2.Driver
+		spring.datasource.username=sa
+		spring.datasource.password=password
+		spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+		spring.h2.console.enabled=true
+
+
+2. Api LINK
+	http://localhost:8080/FetchNextNumber/1
+	
+	The last path variable range from 1 to 9
+3. Multiple users/applications 
+	can request the data and each one will get distinct output.
+
