@@ -1,0 +1,30 @@
+1.Framework
+	Spring boot
+2.Architecture
+	MVC architecture
+3.Tools
+	Intellij IDE , H2 database , Postman , chrome , 
+4.End point
+	@GetMapping  in spring annotation Which receives the category as /FetchVariable/{category}. Category 		ranges from 1 to 9.
+		api link is 
+		Http://Localhost:8080/Fetchnextnumber/1
+5. Data Model
+	1.Table model – h2 database stores this as a table. 
+		Two variables
+			1.Category
+			2.value
+		
+	2.Return object model –  this returns below two value has JSON object.
+		1. oldValue
+		2. NewValue
+6. Service class –  all the business logic of the application reside
+	Contains two methods,businessLogic() has public and digSum() has private.
+
+7. Algorithms
+	To find a digit sum in O(1) time Complexity.
+	If n == 0
+	   return 0;
+	If n % 9 == 0      
+	    digSum(n) = 9
+	Else               
+	    digSum(n) = n % 9
